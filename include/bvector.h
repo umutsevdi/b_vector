@@ -71,7 +71,7 @@ void bvector_free(bvector* vector);
 /* Returns a copy of the given vector */
 bvector* bvector_copy(bvector* vector);
 /** Returns the value of the index in the vector, returns
- * <b>__BVECTOR_OUT_OF_BOUNDS</b> if the index is outside the scope of
+ * <bold>__BVECTOR_OUT_OF_BOUNDS</bold> if the index is outside the scope of
  * the vector. */
 int bvector_get(bvector* vector, uint64_t index);
 /* Assigns a new value to the selected index */
