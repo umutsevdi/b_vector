@@ -57,3 +57,29 @@ int main(int argc, char* argv[])
     printf("%d \n", __BVECTOR_STATIC_COUNT(v));
 }
 #endif
+
+/******************************************************************************
+                                    TEST 3
+*****************************************************************************/
+/* Tests the bvector_apply */
+#ifdef TEST_3
+bool apply(bool value)
+{
+    return 1;
+}
+
+int main(int argc, char* argv[])
+{
+    __bvector_static v = 0x0FFFFFFFFFFFFFFF;
+    bvector* vector = bvector_new(128);
+    vector->vectors[0] = v;
+    printf("%lu \n", vector->vectors[0]);
+    printf("%lu\n", bvector_count(vector));
+    bvector_apply(vector, apply);
+    printf("%lu \n", vector->vectors[0]);
+    printf("%lu\n", bvector_count(vector));
+
+    printf("%d\n", __BVECTOR_STATIC_COUNT(__BVECTOR_STATIC_ONES));
+    printf("%d\n", __BVECTOR_STATIC_COUNT(0));
+}
+#endif
