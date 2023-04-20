@@ -12,14 +12,14 @@ all: $(BIN)
 
 # Parameters:
 # Depending on the test the compilation changes. - default 1
-TEST ?= 1
+CASE ?= 1
 
 $(BIN): $(OBJ)
-	g++ $(CXXFLAGS) $(OBJ) -o $(BIN)
+	gcc $(CXXFLAGS) $(OBJ) -o $(BIN)
 
 obj/%.o: src/%.c
 # Replace the letter for the example
-	@sed -i "s/#define TEST_./#define TEST_$(TEST)/" src/main.c
+	@sed -i "s/#define TEST_./#define TEST_$(CASE)/" src/main.c
 	gcc $(CXXFLAGS) -c $< -o $@  -Iinclude
 
 clean:
