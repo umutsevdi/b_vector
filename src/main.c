@@ -3,9 +3,10 @@
  * File: main.cpp
  *
  * Author: Umut Sevdi
- * Created: 03/12/23
- * Description: Bioinformatics Lecture Tutorial - 1 examples
-*****************************************************************************/
+ * Created: 04/19/23
+ * Description: Tests for allocated bitwise boolean array
+******************************************************************************/
+
 #include "bvector.h"
 #include <stdio.h>
 

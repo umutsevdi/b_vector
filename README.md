@@ -8,7 +8,7 @@ It comes with the following functions and macros:
 
 - **__BVECTOR_STATIC_BOOL_COUNT**:  How much boolean value can fit in a single
 static vector.
-- **__BVECTOR_STATIC_ONES**: A static bvector where all bits are 2.
+- **__BVECTOR_STATIC_ONES**: A static bvector where all bits are 1.
 - **__BVECTOR_STATIC_ONE_GENERATE(__COUNT)** Generates a __bvector_static whose
 least significant __COUNT bit is 1 and rest is zero.
 - `int __BVECTOR_STATIC_COUNT(__bvector_static v)`: Returns the number of ones
